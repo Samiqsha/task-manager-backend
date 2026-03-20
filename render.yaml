@@ -1,0 +1,8 @@
+# Render Blueprint: run build & start from task-manager-backend so node_modules is available
+services:
+  - type: web
+    name: task-manager-backend
+    runtime: node
+    rootDir: task-manager-backend
+    buildCommand: npm install
+    startCommand: npm start

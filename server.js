@@ -1,4 +1,8 @@
-require('dotenv').config();
+try {
+    require('dotenv').config();
+} catch (_) {
+    // dotenv optional (e.g. production where env vars are set by host)
+}
 const express = require('express');
 const cors = require('cors');
 const { createClient } = require('@supabase/supabase-js');
